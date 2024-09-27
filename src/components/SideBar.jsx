@@ -13,6 +13,9 @@ const SideBar = () => {
             eius harum.
           </p>
         </div>
+        <button>
+          <i className="fa-solid fa-right-long"></i>
+        </button>
       </div>
     </div>
   );
