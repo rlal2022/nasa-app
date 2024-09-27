@@ -1,9 +1,14 @@
-import { useState } from "react";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import SideBar from "./components/SideBar";
+import "./index.css";
 
 function App() {
   return (
     <>
-      <h1>hello world</h1>
+      <Main />
+      <SideBar></SideBar>
+      <Footer />
     </>
   );
 }
