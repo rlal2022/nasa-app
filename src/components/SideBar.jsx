@@ -1,8 +1,9 @@
 import React from "react";
 
-const SideBar = () => {
+const SideBar = (props) => {
+  const { handleToggleModal } = props;
   return (
-    <div className="sidebar">
+    <div className="sidebar" onClick={handleToggleModal}>
       <div className="bgOverlay"></div>
       <div className="sidebarContents">
         <div>
@@ -13,7 +14,7 @@ const SideBar = () => {
             eius harum.
           </p>
         </div>
-        <button>
+        <button onClick={handleToggleModal}>
           <i className="fa-solid fa-right-long"></i>
         </button>
       </div>

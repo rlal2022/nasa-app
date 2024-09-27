@@ -1,6 +1,7 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { showModal, handleToggleModal } = props;
   return (
     <footer>
       <div className="bgGradient"></div>
@@ -8,7 +9,7 @@ const Footer = () => {
         <h2>The Moon at night.</h2>
         <h1>APOD PROJECT</h1>
       </div>
-      <button>
+      <button onClick={handleToggleModal}>
         <i className="fa-solid fa-circle-info"></i>
       </button>
     </footer>
