@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import SideBar from "./components/SideBar";
-import "./index.css";
 
 function App() {
   const [data, setData] = useState(null);
@@ -30,16 +29,24 @@ function App() {
   return (
     <>
       {data ? (
-        <Main />
+        <Main data={data} />
       ) : (
         <div className="loadingState">
           <i className="fa-solid fa-gear"></i>
         </div>
       )}
       {/* conditional rendering sidebar*/}
-      {showModal && <SideBar handleToggleModal={handleToggleModal} />}
+      {showModal && (
+        <SideBar data={data} handleToggleModal={handleToggleModal} />
+      )}
 
-      <Footer showModal={showModal} />
+      {data && (
+        <Footer
+          data={data}
+          showModal={showModal}
+          handleToggleModal={handleToggleModal}
+        />
+      )}
     </>
   );
 }
