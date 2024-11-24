@@ -6,7 +6,7 @@ const Footer = (props) => {
     <footer>
       <div className="bgGradient"></div>
       <div>
-        <h1>APOD PROJECT</h1>
+        <h1>NASA APOD PROJECT</h1>
         <h2>{data?.title}</h2>
       </div>
       <button onClick={handleToggleModal}>
